@@ -38,16 +38,19 @@ let package = Package(
             name: "SearchUI",
             dependencies: ["CustomNavigation"],
             path: "SearchUI",
+            exclude: ["Tests"],
             resources: [.process("README.md")]),
         .target(
             name: "DI",
             dependencies: [],
             path: "DI",
+            exclude: ["Tests"],
             resources: [.process("README.md")]),
         .target(
             name: "BooksApi",
             dependencies: [],
             path: "BooksApi",
+            exclude: ["Tests"],
             resources: [
                 .process("README.md"),
                 .process("booksApi.yaml"),
@@ -56,6 +59,7 @@ let package = Package(
             name: "MoviesApi",
             dependencies: [],
             path: "MoviesApi",
+            exclude: ["Tests"],
             resources: [
                 .process("README.md"),
                 .process("moviesApi.yaml"),
@@ -65,6 +69,7 @@ let package = Package(
             name: "CustomNavigation",
             dependencies: [],
             path: "CustomNavigation",
+            exclude: ["Tests"],
             resources: [.process("README.md")]),
     ]
 )
