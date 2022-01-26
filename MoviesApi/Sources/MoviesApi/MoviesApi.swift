@@ -20,6 +20,13 @@ open class MoviesAPI: ObservableObject {
             completion(movie, error)
         }
     }
+    
+    public func getMovieDetails(forImdbID imdbID: String, completion: @escaping (MovieFull?, Error?) -> Void) {
+        detailedMovie = .empty
+        MovieDetailsAPI.getMovieDetails(i: imdbID, apiKey: apiKey) { movie, error in
+            completion(movie, error)
+        }
+    }
 }
 
 extension MovieShort: Identifiable {
